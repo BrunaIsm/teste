@@ -1,0 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    color: black;
+}
+
+/* https://www.figma.com/design/4KsrNDNdWIC8rzPgvwTtuk/PBL-APPMAX-PROTOT?node-id=1-887&t=4DAXEAo5NftN5ncP-0 */
