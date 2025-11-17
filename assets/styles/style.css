@@ -1,3 +1,602 @@
 /* https://www.figma.com/design/4KsrNDNdWIC8rzPgvwTtuk/PBL-APPMAX-PROTOT?node-id=1-887&t=4DAXEAo5NftN5ncP-0 */
+.conversation .conversation-container {
+    height:100%;
+}
+
+.marvel-device.nexus5:before {
+    width: 90%;
+    max-width: 320px;
+}
+
+.marvel-device.nexus5 {
+    padding: 50px 15px 50px 15px;
+    width: 90%;
+    max-width: 320px;
+    height: 568px;
+    background: #1e1e1e;
+    border-radius: 20px;
+}
+
+:root {
+    --light-purple: #9B6AFA;
+    --white-purple: #B6A7D2;
+    --dark-blue: #131326;
+    --dark-purple: #45337C;
+    --purple: #553999;
+    --blue: #281E49;
+    --white: #F7F3FF;
+    --grey: #e7e7e7;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "DM Sans";
+    outline: none;
+    border: none;
+}
+
+html, body {
+    height: 100%;
+}
+
+body > main {
+    min-height: 90vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.container {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 4%;
+    display: flex;
+}
+
+.button {
+    background-color: var(--light-purple);
+    color: #FFFFFF;
+    padding: 8px 15px;
+    border-radius: 10px;
+    font-weight: normal;
+    cursor: pointer;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+/* menu */
+
+body > header {
+    background-color: #FFFFFF;
+    padding: 25px 0;
+    border-bottom: 4px solid var(--grey);
+    position: relative;
+}
+
+header .container{
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+
+header #logo {
+    display: flex;
+}
+
+header nav#menu-desktop ul {
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+
+header nav#menu-desktop ul li {
+    padding: 0 10px;
+    font-weight: 600;
+    color: var(--blue);
+    font-size: 18px;
+}
+
+header nav#menu-desktop ul li a {
+    font-weight: normal;
+}
+
+/* menu mobile */
 
 
+header nav#menu-mobile {
+    display: none;
+    flex-direction: column;
+}
+
+header nav#menu-mobile > div svg {
+    font-size: 30px;
+    color: var(--dark-purple);
+    cursor: pointer;
+}
+
+header nav#menu-mobile ul {
+    display: none;
+    position: absolute;
+    top: 100%;             
+    left: 0;
+    width: 100%;
+    background: white;
+    padding: 20px 0;
+    gap: 15px;
+    border-top: 1px solid #ddd;
+    z-index: 999;
+    text-align: center;
+}
+
+header nav#menu-mobile ul li {
+    padding: 3px 0;
+    font-size: 17px;
+}
+
+header nav#menu-mobile ul li a.button {
+    display: inline-block;
+    width: fit-content;
+    margin-left: 20px;
+}
+
+/* section one */
+
+section#one {
+    background: #FFFFFF;
+    padding: 70px 0;
+}
+
+section#one .container {
+    align-items: center;
+    align-content: center;
+    color: var(--blue);
+}
+
+section#one .container img {
+    width: 60%;
+}
+
+section#one article h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+section#one article p {
+    font-size: 21px;
+    margin-bottom: 25px;
+}
+
+/* section two */
+
+section#two {
+    background: var(--dark-blue);
+    padding: 70px 0;
+    color: #FFFFFF;
+}
+
+section#two .container {
+    flex-direction: column;
+}
+
+section#two h1 {
+    font-size: 44px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+section#two article {
+    display: flex;
+    margin-top: 30px;
+    align-items: center;
+}
+
+section#two article:nth-child(2n+1) {
+    flex-direction: row-reverse;
+    margin-right: 0px;
+    margin-left: 10px;
+}
+
+section#two article:nth-child(2n+1) div {
+    margin-right: 0px;
+    margin-left: 10px;
+}
+
+section#two article div {
+    margin-right: 10px;
+}
+
+section#two article div h2 {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+section#two article div p {
+    font-size: 22px;
+}
+
+section#two article img {
+    width: 33%;
+}
+
+/* section three */
+
+section#three {
+    background-color: var(--white);
+    padding: 70px 0;
+    color: var(--dark-purple);
+}
+
+section#three .container {
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+}
+
+section#three article h1 {
+    font-size: 44px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+section#three article > p {
+    font-size: 26px;
+    text-align: center;
+    color: var(--purple);
+}
+
+section#three article#whatsapp-simulator {
+    margin-top: 60px;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+section#three article#whatsapp-simulator form {
+    width: 30%;
+    margin-right: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+section#three article#whatsapp-simulator form > div {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+section#three article#whatsapp-simulator form div label {
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+section#three article#whatsapp-simulator form div input[type="text"] {
+    padding: 8px 10px;
+    font-size: 16px;
+    border: 2px solid var(--white-purple);
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
+/* section plans */
+
+section#plans {
+    background-color: var(--white);
+    padding: 70px 0;
+}
+
+section#plans .container {
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    color: #000000;
+}
+
+section#plans h1 {
+    font-size: 44px;
+    font-weight: 700;
+    color: var(--blue);
+}
+
+section#plans .container > div {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+section#plans .container > div article {
+    width: 31%;
+    background-color: var(--white);
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    box-shadow: 0px 0px 30px #c7c7c7;
+    padding: 30px 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+section#plans .container > div article header {
+    color: var(--blue);
+    margin-bottom: 25px;
+    border-bottom: 2px solid #D3D3DD;
+}
+
+section#plans .container > div article header .planTitle {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+section#plans .container > div article header .planTitle h2 {
+    margin-left: 10px;
+    font-weight: 500;
+}
+
+section#plans .container > div article header .planPrice {
+    margin-bottom: 10px;
+}
+
+section#plans .container > div article header .planPrice p {
+    font-size: 27px;
+    font-weight: 500;
+}
+
+section#plans .container > div article header .planPrice span {
+    color: #000000;
+    font-weight: normal;
+    font-size: 18px;
+}
+
+section#plans .container > div article main ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+section#plans .container > div article main ul li svg {
+    margin-right: 8px;
+    color: var(--light-purple);
+    font-size: 25px;
+}
+
+section#plans .container > div article footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+section#plans .container > div article footer .button {
+    display: block;
+    width: 100%;
+}
+
+/* section FAQ */
+
+section#FAQ {
+    background-color: var(--light-purple);
+    padding: 70px 0;
+}
+
+section#FAQ .container {
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
+
+section#FAQ h1 {
+    font-size: 44px;
+    font-weight: 700;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+section#FAQ article {
+    width: 100%;
+    max-width: 800px;
+    margin-top: 40px;
+    background-color: #FFFFFF;
+    color: #000000;
+    padding: 20px 2%;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+section#FAQ article header {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section#FAQ article header svg {
+    display: inline-block;
+    font-size: 35px;
+    color: var(--light-purple);
+    transform: rotate(0deg) !important;
+    -webkit-transform: rotate(0deg) !important;
+    -moz-transform: rotate(0deg) !important;
+    -ms-transform: rotate(0deg) !important;
+    -o-transform: rotate(0deg) !important;
+}
+
+section#FAQ article header svg.rotated {
+    transform: rotate(180deg) !important;
+    -webkit-transform: rotate(180deg) !important;
+    -moz-transform: rotate(180deg) !important;
+    -ms-transform: rotate(180deg) !important;
+    -o-transform: rotate(180deg) !important;
+}
+
+section#FAQ article > div {
+    display: none;
+    margin-top: 15px;
+}
+
+/* footer */
+
+body > footer {
+    background-color: var(--dark-purple);
+    padding: 80px 0;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+body > footer .container {
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+}
+
+body > footer .container > article {
+    width: 31%;
+}
+
+body > footer .container > article img {
+    width: 100%;
+}
+
+body > footer .container > article#footer-logo {
+    font-size: 26px;
+}
+
+body > footer .container > article#namesMembers {
+    font-size: 21px;
+    text-align: right;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1200px) {
+    body > footer {
+        padding: 40px 0;
+    }
+
+    body > footer .container {
+        flex-direction: column;
+    }
+
+    body > footer .container > article {
+        width: 100%;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+
+    body > footer .container > article#namesMembers {
+        margin-bottom: 0;
+        text-align: center;
+    }
+}
+
+@media (max-width: 1024px) {
+    section#plans {
+        padding: 35px 0;
+    }
+
+    section#plans .container > div {
+        flex-direction: column;
+    }
+
+    section#plans .container > div article {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    section#plans .container > div article:last-child {
+        margin-bottom: 0px;
+    }
+}
+
+@media (max-width: 920px) {
+    header nav#menu-desktop ul li {
+        font-size: 12px;
+    }
+
+    section#one {
+        padding: 35px 0;
+    }
+
+    section#one .container {
+        flex-direction: column;
+    }
+
+    section#three {
+        padding: 35px 0;
+    }
+
+    section#three .container article {
+        width: 100%;
+    }
+
+    section#three article#whatsapp-simulator form {
+        width: 100%;
+        margin: 0;
+    }
+
+    section#three .container article#whatsapp-simulator {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section#three .container article#whatsapp-simulator .mockup {
+        margin-top: 40px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    header nav#menu-desktop {
+        display: none;
+    }
+
+    header nav#menu-mobile {
+        display: flex;
+    }
+
+    section#two h1 {
+        margin-bottom: 30px;
+    }
+
+    section#two article {
+        flex-direction: column !important;
+        margin: 0 0 25px 0 !important;
+    }
+
+    section#two article:last-child {
+        margin: 0 !important;
+    }
+
+    section#two article div {
+        margin: 0 0 25px 0 !important;
+    }
+
+    section#FAQ h1 {
+        margin-bottom: 15px
+    }
+
+    section#FAQ article {
+        margin-top: 20px;
+    }
+}

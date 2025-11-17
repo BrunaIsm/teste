@@ -4,33 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Appmax</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.1.2/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="https://rawgit.com/marvelapp/devices.css/master/assets/devices.min.css">
+    <link rel="stylesheet" href="assets/styles/whatsapp-base.css">
     <link rel="stylesheet" href="assets/styles/style.css">
     <link rel="stylesheet" href="assets/styles/all.min.css">
-    <script src="assets/js/script.js"></script>
-    <script src="assets/js/all.min.js"></script>
 </head>
 <body>
     <header>
         <div class="container">
-            <div class="logo"></div>
+            <div id="logo">
+                <img src="assets/imgs/appmax-standard-logo.png">
+            </div>
             <nav id="menu-desktop">
                 <ul>
-                    <li>Soluções</li>
-                    <li>Empresa</li>
+                    <li>
+                        Soluções
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </li>
+                    <li>
+                        Empresa
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </li>
                     <li>Taxas</li>
                     <li>Ajuda</li>
                     <li>Blog</li>
-                    <a class="button">CRIE SUA CONTA</a>
+                    <li>
+                        <a href="#" class="button">CRIE SUA CONTA</a>
+                    </li>
                 </ul>
             </nav>
             <nav id="menu-mobile">
+                <div>
+                    <i class="fa-solid fa-bars"></i>
+                </div>
                 <ul>
                     <li>Soluções</li>
                     <li>Empresa</li>
                     <li>Taxas</li>
                     <li>Ajuda</li>
                     <li>Blog</li>
-                    <a class="button">CRIE SUA CONTA</a>
+                    <li>
+                        <a href="#" class="button">CRIE SUA CONTA</a>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -43,7 +59,7 @@
                     <h1>Automação no Rastreamento de Entregas via Whatsapp</h1>
                     <p>O chatbot de rastreamento da Appmax automatiza o envio de atualizações de entrega pelo WhatsApp, garantindo que o cliente receba todas as informações com agilidade e segurança.</p>
                     <p>A solução reduz custos operacionais, melhora a experiência pós-venda e aumenta a confiança do cliente em cada etapa da compra.</p>
-                    <a href="" class="button">ASSINE PLANOS</a>
+                    <a href="#plans" class="button">ASSINE PLANOS</a>
                 </article>
                 <img src="assets/imgs/woman-vector.png">
             </div>
@@ -86,40 +102,15 @@
                     <p>Simule como sua loja pode automatizar o envio de mensagens no WhatsApp.</p>
                 </article>
 
-                <article>
-                    <form onchange="attMessagesOfMockup()">
+                <article id="whatsapp-simulator">
+                    <form>
                         <div>
                             <label for="name">Nome da empresa:</label>
                             <input type="text" name="name" id="name">
                         </div>
 
                         <div>
-                            <p>Linguagem de comunicação:</p>
-
-                            <div>
-                                <label for="standard">
-                                    <input type="radio" name="comunicationLanguage" id="standard" value="padrão" checked>
-                                    Padrão
-                                </label>
-                            </div>
-
-                            <div>
-                                <label for="formal">
-                                    <input type="radio" name="comunicationLanguage" id="formal" value="formal">
-                                    Formal
-                                </label>
-                            </div>
-
-                            <div>
-                                <label for="informal">
-                                    <input type="radio" name="comunicationLanguage" id="informal" value="informal">
-                                    Informal
-                                </label>
-                            </div>
-                        </div>
-
-                        <div>
-                            <p>Plano de Demonstração:</p>
+                            <label for="demoPlan">Plano de Demonstração:</label>
 
                             <div>
                                 <label for="basic">
@@ -142,9 +133,69 @@
                                 </label>
                             </div>
                         </div>
-                    </form>
-                    <div class="mockup">
 
+                        <div>
+                            <label for="comunicationLanguage">Linguagem de comunicação:</label>
+
+                            <div>
+                                <label for="standard">
+                                    <input type="radio" name="comunicationLanguage" id="standard" value="standard" checked>
+                                    Padrão
+                                </label>
+                            </div>
+
+                            <div>
+                                <label for="formal">
+                                    <input type="radio" name="comunicationLanguage" id="formal" value="formal">
+                                    Formal
+                                </label>
+                            </div>
+
+                            <div>
+                                <label for="informal">
+                                    <input type="radio" name="comunicationLanguage" id="informal" value="informal">
+                                    Informal
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="mockup">
+                        <div class="marvel-device nexus5">
+                            <div class="screen">
+                                <div class="screen-container">
+                                    <div class="status-bar">
+                                        <div class="time"></div>
+                                        <div class="battery">
+                                            <i class="zmdi zmdi-battery"></i>
+                                        </div>
+                                        <div class="network">
+                                            <i class="zmdi zmdi-network"></i>
+                                        </div>
+                                        <div class="wifi">
+                                            <i class="zmdi zmdi-wifi-alt-2"></i>
+                                        </div>
+                                    </div>
+                                    <div class="chat">
+                                        <div class="chat-container">
+                                            <div class="user-bar">
+                                                <div class="avatar">
+                                                    <img src="assets/imgs/appmax-icon-logo.png" alt="Avatar">
+                                                </div>
+                                                <div class="name">
+                                                    <span>Appmax</span>
+                                                </div>
+                                            </div>
+                                            <div class="conversation">
+                                                <div class="conversation-container">
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </article>
             </div>
@@ -152,155 +203,165 @@
 
         <section id="plans">
             <div class="container">
-                <article>
-                    <header>
+                <h1>Escolha seu plano</h1>
+
+                <div>
+                    <article>
                         <div>
-                            <img src="assets/imgs/vector.png">
-                            <h4>App Basic</h4>
+                            <header>
+                                <div class="planTitle">
+                                    <img src="assets/imgs/vector.png">
+                                    <h2>App Basic</h2>
+                                </div>
+                                <div class="planPrice">
+                                    <p>R$ 700 <span>/mês</span></p>
+                                </div>
+                            </header>
+
+                            <main>
+                                <ul>
+                                    <li>
+                                        <i class="fa-solid fa-circle-check"></i>
+                                        <p>Até 2 mil pedidos por mês, com 4 mensagens automáticas por pedido.</p>
+                                    </li>
+
+                                    <li>
+                                        <i class="fa-solid fa-circle-check"></i>
+                                        <p>Confirmação do pedido com identificação da loja e código em até 7 dias.</p>
+                                    </li>
+
+                                    <li>
+                                        <i class="fa-solid fa-circle-check"></i>
+                                        <p>Mensagem automática com o código e link de rastreio.</p>
+                                    </li>
+
+                                    <li>
+                                        <i class="fa-solid fa-circle-check"></i>
+                                        <p>Alerta de que o pedido saiu para entrega.</p>
+                                    </li>
+
+                                    <li>
+                                        <i class="fa-solid fa-circle-check"></i>
+                                        <p>Confirmação de pedido entregue.</p>
+                                    </li>
+                                </ul>
+                            </main>
                         </div>
+                        
+                        <footer>
+                            <a href="" class="button">ASSINAR APP BASIC</a>
+                        </footer>
+                    </article>
+
+                    <article>
                         <div>
-                            <p>R$ 700 <span>/mês</span></p>
+                            <header>
+                                <div class="planTitle">
+                                    <img src="assets/imgs/vector.png">
+                                    <h2>App Standard</h2>
+                                </div>
+                                <div class="planPrice">
+                                    <p>R$ 2.640 <span>/mês</span></p>
+                                </div>
+                            </header>
+
+                            <main>
+                                <ul>
+                                    <li>
+                                        <i class="fa-solid fa-circle-check"></i>
+                                        <p>De 2 a 8 mil pedidos por mês, com 4 mensagens automáticas por pedido.</p>
+                                    </li>
+
+                                    <li>
+                                        <i class="fa-solid fa-circle-check"></i>
+                                        <p>Confirmação com identificação personalizada da sua loja.</p>
+                                    </li>
+
+                                    <li>
+                                        <i class="fa-solid fa-circle-check"></i>
+                                        <p>Aviso sobre o prazo de envio do código de rastreio.</p>
+                                    </li>
+
+                                    <li>
+                                        <i class="fa-solid fa-circle-check"></i>
+                                        <p>Mensagem personalizada com código e link de rastreio da sua marca.</p>
+                                    </li>
+
+                                    <li>
+                                        <i class="fa-solid fa-circle-check"></i>
+                                        <p>Alerta personalizado de que o pedido saiu para entrega.</p>
+                                    </li>
+
+                                    <li>
+                                        <i class="fa-solid fa-circle-check"></i>
+                                        <p>Confirmação personalizada de pedido entregue.</p>
+                                    </li>
+                                </ul>
+                            </main>
                         </div>
-                    </header>
+                        
+                        <footer>
+                            <a href="" class="button">ASSINAR APP STANDARD</a>
+                        </footer>
+                    </article>
 
-                    <main>
-                        <ul>
-                            <li>
-                                <i class="fa-solid fa-circle-check"></i>
-                                <p>Até 2 mil pedidos por mês, com 4 mensagens automáticas por pedido.</p>
-                            </li>
-
-                            <li>
-                                <i class="fa-solid fa-circle-check"></i>
-                                <p>Confirmação do pedido com identificação da loja e código em até 7 dias.</p>
-                            </li>
-
-                            <li>
-                                <i class="fa-solid fa-circle-check"></i>
-                                <p>Mensagem automática com o código e link de rastreio.</p>
-                            </li>
-
-                            <li>
-                                <i class="fa-solid fa-circle-check"></i>
-                                <p>Alerta de que o pedido saiu para entrega.</p>
-                            </li>
-
-                            <li>
-                                <i class="fa-solid fa-circle-check"></i>
-                                <p>Confirmação de pedido entregue.</p>
-                            </li>
-                        </ul>
-                    </main>
-
-                    <footer>
-                        <a href="" class="button">ASSINAR APP BASIC</a>
-                    </footer>
-                </article>
-
-                <article>
-                    <header>
+                    <article>
                         <div>
-                            <img src="assets/imgs/vector.png">
-                            <h4>App Standard</h4>
+                            <header>
+                                <div class="planTitle">
+                                    <img src="assets/imgs/vector.png">
+                                    <h2>Max Premium</h2>
+                                </div>
+                                <div class="planPrice">
+                                    <p>R$ 7.300 <span>/mês</span></p>
+                                </div>
+                            </header>
+
+                            <main>
+                                <ul>
+                                    <li>
+                                        <i class="fa-solid fa-circle-check"></i>
+                                        <p>De 8 a 15 mil pedidos por mês, com 6 mensagens por pedido.</p>
+                                    </li>
+
+                                    <li>
+                                        <i class="fa-solid fa-circle-check"></i>
+                                        <p><strong>Acima de 15 mil pedidos por mês:</strong> negociar diretamente com a Appmax.</p>
+                                    </li>
+
+                                    <li>
+                                        <i class="fa-solid fa-circle-check"></i>
+                                        <p>Mensagem de confirmação personalizada com aviso do código de rastreio.</p>
+                                    </li>
+
+                                    <li>
+                                        <i class="fa-solid fa-circle-check"></i>
+                                        <p>Alerta quando o pedido chega ao centro logístico.</p>
+                                    </li>
+
+                                    <li>
+                                        <i class="fa-solid fa-circle-check"></i>
+                                        <p>Alerta quando o pedido sai do centro logístico.</p>
+                                    </li>
+
+                                    <li>
+                                        <i class="fa-solid fa-circle-check"></i>
+                                        <p>Mensagem personalizada de saída para entrega.</p>
+                                    </li>
+                                    
+                                    <li>
+                                        <i class="fa-solid fa-circle-check"></i>
+                                        <p>Confirmação de entrega com pedido de avaliação.</p>
+                                    </li>
+                                </ul>
+                            </main>
                         </div>
-                        <div>
-                            <p>R$ 2.640 <span>/mês</span></p>
-                        </div>
-                    </header>
 
-                    <main>
-                        <ul>
-                            <li>
-                                <i class="fa-solid fa-circle-check"></i>
-                                <p>De 2 a 8 mil pedidos por mês, com 4 mensagens automáticas por pedido.</p>
-                            </li>
-
-                            <li>
-                                <i class="fa-solid fa-circle-check"></i>
-                                <p>Confirmação com identificação personalizada da sua loja.</p>
-                            </li>
-
-                            <li>
-                                <i class="fa-solid fa-circle-check"></i>
-                                <p>Aviso sobre o prazo de envio do código de rastreio.</p>
-                            </li>
-
-                            <li>
-                                <i class="fa-solid fa-circle-check"></i>
-                                <p>Mensagem personalizada com código e link de rastreio da sua marca.</p>
-                            </li>
-
-                            <li>
-                                <i class="fa-solid fa-circle-check"></i>
-                                <p>Alerta personalizado de que o pedido saiu para entrega.</p>
-                            </li>
-
-                            <li>
-                                <i class="fa-solid fa-circle-check"></i>
-                                <p>Confirmação personalizada de pedido entregue.</p>
-                            </li>
-                        </ul>
-                    </main>
-
-                    <footer>
-                        <a href="" class="button">ASSINAR APP STANDARD</a>
-                    </footer>
-                </article>
-
-                <article>
-                    <header>
-                        <div>
-                            <img src="assets/imgs/vector.png">
-                            <h4>Max Premium</h4>
-                        </div>
-                        <div>
-                            <p>R$ 7.300 <span>/mês</span></p>
-                        </div>
-                    </header>
-
-                    <main>
-                        <ul>
-                            <li>
-                                <i class="fa-solid fa-circle-check"></i>
-                                <p>De 8 a 15 mil pedidos por mês, com 6 mensagens por pedido.</p>
-                            </li>
-
-                            <li>
-                                <i class="fa-solid fa-circle-check"></i>
-                                <p><strong>Acima de 15 mil pedidos por mês:</strong> negociar diretamente com a Appmax.</p>
-                            </li>
-
-                            <li>
-                                <i class="fa-solid fa-circle-check"></i>
-                                <p>Mensagem de confirmação personalizada com aviso do código de rastreio.</p>
-                            </li>
-
-                            <li>
-                                <i class="fa-solid fa-circle-check"></i>
-                                <p>Alerta quando o pedido chega ao centro logístico.</p>
-                            </li>
-
-                            <li>
-                                <i class="fa-solid fa-circle-check"></i>
-                                <p>Alerta quando o pedido sai do centro logístico.</p>
-                            </li>
-
-                            <li>
-                                <i class="fa-solid fa-circle-check"></i>
-                                <p>Mensagem personalizada de saída para entrega.</p>
-                            </li>
-
-                            <li>
-                                <i class="fa-solid fa-circle-check"></i>
-                                <p>Confirmação de entrega com pedido de avaliação.</p>
-                            </li>
-                        </ul>
-                    </main>
-
-                    <footer>
-                        <a href="" class="button">ASSINAR MAX PREMIUM</a>
-                    </footer>
-                </article>
+                        <footer>
+                            <a href="" class="button">ASSINAR MAX PREMIUM</a>
+                        </footer>
+                    </article>
+                </div>
             </div>
         </section>
 
@@ -311,87 +372,106 @@
                 </h1>
 
                 <article>
-                    <div>
+                    <header>
                         <p>O que é o chatbot de rastreamento da Appmax?</p>
-                        <i>INSERIR</i>
+                        <i class="fa-solid fa-circle-chevron-down"></i>
+                    </header>
+                    <div>
+                        <p>É uma ferramenta automatizada que envia, via WhatsApp, todas as atualizações de entrega do pedido, desde a confirmação da compra até a entrega final.</p>
                     </div>
-                    <p>É uma ferramenta automatizada que envia, via WhatsApp, todas as atualizações de entrega do pedido, desde a confirmação da compra até a entrega final.</p>
                 </article>
 
                 <article>
-                    <div>
+                    <header>
                         <p>Como o chatbot melhora a experiência do meu cliente?</p>
-                        <i></i>
+                        <i class="fa-solid fa-circle-chevron-down"></i>
+                    </header>
+                    <div>
+                        <p>Ele elimina a necessidade de o cliente buscar e-mails ou acessar sites de rastreio. As notificações chegam automaticamente no WhatsApp, de forma rápida, prática e segura.</p>
                     </div>
-                    <p>Ele elimina a necessidade de o cliente buscar e-mails ou acessar sites de rastreio. As notificações chegam automaticamente no WhatsApp, de forma rápida, prática e segura.</p>
                 </article>
 
                 <article>
-                    <div>
+                    <header>
                         <p>Em quanto tempo o código de rastreio é enviado?</p>
-                        <i></i>
+                        <i class="fa-solid fa-circle-chevron-down"></i>
+                    </header>
+                    <div>
+                        <p>O código é disponibilizado até 7 dias após a confirmação do pedido, dependendo do processo logístico de cada loja.</p>
                     </div>
-                    <p>O código é disponibilizado até 7 dias após a confirmação do pedido, dependendo do processo logístico de cada loja.</p>
                 </article>
 
                 <article>
-                    <div>
+                    <header>
                         <p>Posso personalizar as mensagens com o nome da minha loja?</p>
-                        <i></i>
+                        <i class="fa-solid fa-circle-chevron-down"></i>
+                    </header>
+                    <div>
+                        <p>Sim. A partir do plano App Standard, todas as mensagens podem ser personalizadas com o nome e o estilo de comunicação da sua marca.</p>
                     </div>
-                    <p>Sim. A partir do plano App Standard, todas as mensagens podem ser personalizadas com o nome e o estilo de comunicação da sua marca.</p>
                 </article>
 
                 <article>
-                    <div>
+                    <header>
                         <p>Há limite de pedidos mensais?</p>
-                        <i></i>
-                    </div>
-                    <p>Sim.
+                        <i class="fa-solid fa-circle-chevron-down"></i>
+                    </header>
+
+                    <div>
+                        <p>Sim.</p>
                         <ul>
                             <li>App Basic: até 2 mil pedidos/mês</li>
                             <li>App Standard: 2 a 8 mil pedidos/mês</li>
                             <li>App Max Premium: 8 a 15 mil pedidos/mês</li>
                         </ul>
-                    Para volumes acima de 15 mil pedidos, entre em contato com a Appmax para criar um plano personalizado.</p>
+                        <p>
+                            Para volumes acima de 15 mil pedidos, entre em contato com a Appmax para criar um plano personalizado.
+                        </p>
+                    </div>
                 </article>
             </div>
         </section>
-
-        <footer>
-            <div class="container">
-                <article id="footer-logo">
-                    <img src="assets/imgs/appmax-white-logo.png">
-                    <p>O máximo pelo seu negócio</p>
-                </article>
-
-                <article>
-                    <img src="assets/imgs/gc-logo.png">
-                </article>
-
-                <article id="namesMembers">
-                    <div>
-                        <h4>Programação Java:</h4>
-                        <p>Azazel Castro e Theo Souza</p>
-                    </div>
-
-                    <div>
-                        <h4>Gestão Comercial:</h4>
-                        <p>Gabriely Carrilo e Letícia Knob</p>
-                    </div>
-
-                    <div>
-                        <h4>Marketing e Design:</h4>
-                        <p>Sophia Preissler e Thaís Sousa</p>
-                    </div>
-
-                    <div>
-                        <h4>IA e Dados:</h4>
-                        <p>Bruna Martins e Maria Baptista</p>
-                    </div>
-                </article>
-            </div>
-        </footer>
     </main>
+
+    <footer>
+        <div class="container">
+            <article id="footer-logo">
+                <img src="assets/imgs/appmax-white-logo.png">
+                <p>O máximo pelo seu negócio</p>
+            </article>
+
+            <article>
+                <img src="assets/imgs/gc-logo.png">
+            </article>
+
+            <article id="namesMembers">
+                <div>
+                    <h4>Programação Java:</h4>
+                    <p>Azazel Castro e Theo Souza</p>
+                </div>
+
+                <div>
+                    <h4>Gestão Comercial:</h4>
+                    <p>Gabriely Carrilo e Letícia Knob</p>
+                </div>
+
+                <div>
+                    <h4>Marketing e Design:</h4>
+                    <p>Sophia Preissler e Thaís Sousa</p>
+                </div>
+
+                <div>
+                    <h4>IA e Dados:</h4>
+                    <p>Bruna Martins e Maria Baptista</p>
+                </div>
+            </article>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js"></script>
+    <script src="assets/js/whatsapp-base.js"></script>
+    <script src="assets/js/all.min.js"></script>
+    <script src="assets/js/jQuery.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
